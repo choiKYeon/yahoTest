@@ -51,9 +51,11 @@ public class ReviewController {
         for (int i = 0; i < reviewRepository.getReviews().size(); i++) {
             if (ReviewRepository.getReviews().get(i).getUserId().equals(Container.getCheckedmembers().getUserId()) == false) {
                 System.out.println("작성한 리뷰가 없습니다.");
+            }else {
+                System.out.println("나의 리뷰 목록이 출력되었습니다.");
             }
+            break;
         }
-        System.out.println("나의 리뷰 목록이 출력되었습니다.");
         mainScreen.mainSelect();
     }
     public void modify() {
@@ -95,6 +97,7 @@ public class ReviewController {
 
                 System.out.println(id + "번 리뷰가 수정되었습니다.");
             }
+            break;
         }
         mainScreen.mainSelect();
     }
@@ -129,6 +132,7 @@ public class ReviewController {
 
                 Container.getSc().nextLine().trim();
             }
+            break;
         }
         mainScreen.mainSelect();
     }
